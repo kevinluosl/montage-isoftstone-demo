@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="product.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "owner"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+            },
+            "iAvatarBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "iAvatarBtn"},
+                    "hasTemplate": false
+                }
+            },
+            "introductionBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "introductionBtn"},
+                    "hasTemplate": false
+                }
+            },
+            "businessBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "businessBtn"},
+                    "hasTemplate": false
+                }
+            },
+            "cityBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "cityBtn"},
+                    "hasTemplate": false
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="owner" class="Product">
+    <div class="Product-titleContainer">
+        <div class="Product-titleContainer-title"></div>
+    </div>
+
+    <div class="Product-itemContainer">
+        <div class="Product-itemContainer-itemRow">
+            <div data-montage-id="iAvatarBtn" class="Product-item Product-itemOne"></div>
+            <div data-montage-id="introductionBtn" class="Product-item Product-itemTwo"></div>
+        </div>
+        <div class="Product-itemContainer-itemRow">
+            <div data-montage-id="businessBtn" class="Product-item Product-itemThree"></div>
+            <div data-montage-id="cityBtn" class="Product-item Product-itemFour"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background: #121921;
+}
+
+.Main {
+}
+
+.Main-flowPanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.Main-flowPanel-substitution {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.Main-flowPanel .montage-Flow-Repetition > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.Main-flowPanel-substitution > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

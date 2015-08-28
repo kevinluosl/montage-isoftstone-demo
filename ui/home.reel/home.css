@@ -1,0 +1,54 @@
+.Home {
+    background: #121921;
+}
+
+.Home-logos {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 20%;
+}
+
+.home-bottomLogo {
+    width: 33%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    bottom: 10%;
+}
+
+.Home-logo {
+    width: 33%;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.Home-logoChinese {
+    width: 50%;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.Home-openButton {
+    position: absolute;
+    outline: none;
+    cursor: default;
+    width: 20%;
+    right: 0;
+    left: 0;
+    bottom: 30%;
+    margin: auto;
+    opacity: 0;
+
+}
+
+.Home-openButton--isVisible {
+    opacity: 1;
+}
+
+.Home-openButton:active {
+    opacity: 0.6;
+}

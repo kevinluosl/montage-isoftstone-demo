@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "owner"}
+                }
+            },
+            "openButton": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "openButton"},
+                    "hasTemplate": false,
+                    "label": "开始体验"
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ]
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="owner" class="Home">
+    <div class="Home-logos">
+        <img src="../../assets/images/logo.png" class="Home-logo">
+        <img src="../../assets/images/logo_Chinese.png" class="Home-logoChinese">
+    </div>
+    <div data-montage-id="openButton" class="Home-openButton button animated">
+    </div>
+    <img src="../../assets/images/logo_English.png" class="home-bottomLogo">
+
+</div>
+</body>
+</html>

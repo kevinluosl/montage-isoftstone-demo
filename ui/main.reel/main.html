@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Main</title>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "main"}
+                }
+            },
+            "panelFlow": {
+                "prototype": "montage/ui/flow.reel",
+                "properties": {
+                    "element": {"#": "panelFlow"},
+                    "scrollingMode": "linear",
+                    "isCameraEnabled": false,
+                    "elasticScrollingSpeed": 0.6,
+                    "stride": 1,
+                    "sceneScaleX": {
+                        "numerator": "1",
+                        "denominator": "300"
+                    },
+                    "sceneScaleY": {
+                        "numerator": "1",
+                        "denominator": "1"
+                    },
+                    "sceneOffsetTop": 0,
+                    "sceneOffsetLeft": 0,
+                    "linearScrollingVector": [
+                        -300,
+                        0
+                    ],
+                    "content": [
+                        "home",
+                        "product",
+                        "product-detail"
+                    ],
+                    "paths": [
+                        {
+                            "knots": [
+                                {
+                                    "knotPosition": [
+                                        -300,
+                                        0,
+                                        -200
+                                    ],
+                                    "nextHandlerPosition": [
+                                        -200,
+                                        0,
+                                        0
+                                    ],
+                                    "previousDensity": 1,
+                                    "nextDensity": 1,
+                                    "opacity": -0.2,
+                                    "rotateY": 0
+                                },
+                                {
+                                    "previousHandlerPosition": [
+                                        -100,
+                                        0,
+                                        0
+                                    ],
+                                    "knotPosition": [
+                                        0,
+                                        0,
+                                        0
+                                    ],
+                                    "nextHandlerPosition": [
+                                        100,
+                                        0,
+                                        0
+                                    ],
+                                    "previousDensity": 1,
+                                    "nextDensity": 1,
+                                    "opacity": 2.5,
+                                    "rotateY": 0
+                                },
+                                {
+                                    "previousHandlerPosition": [
+                                        200,
+                                        0,
+                                        0
+                                    ],
+                                    "knotPosition": [
+                                        300,
+                                        0,
+                                        -200
+                                    ],
+                                    "previousDensity": 1,
+                                    "nextDensity": 1,
+                                    "opacity": -0.2,
+                                    "rotateY": 0
+                                }
+                            ],
+                            "headOffset": 1,
+                            "tailOffset": 1,
+                            "units": {
+                                "opacity": "",
+                                "rotateY": "rad"
+                            }
+                        }
+                    ]
+                },
+                "bindings": {
+                    "sceneScaleX.numerator": {"<-": "viewportWidth"}
+                }
+            },
+            "substitution": {
+                "prototype": "montage/ui/substitution.reel",
+                "properties": {
+                    "element": {"#": "substitution"}
+                },
+                "bindings": {
+                    "switchValue": {"<-": "@panelFlow:iteration.object"}
+                }
+            },
+            "home": {
+                "prototype": "ui/home.reel",
+                "properties": {
+                    "element": {"#": "home"}
+                },
+                "bindings": {
+                    "test": {"<-": "@panelFlow:iteration.object"}
+                }
+            },
+            "product": {
+                "prototype": "ui/product.reel",
+                "properties": {
+                    "element": {"#": "product"}
+                }
+            },
+            "productDetail": {
+                "prototype": "ui/product-detail.reel",
+                "properties": {
+                    "element": {"#": "productDetail"}
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="main" data-montage-skin="light" class="Main">
+    <div data-montage-id="panelFlow" class="Main-flowPanel">
+        <div data-montage-id="substitution" class="Main-flowPanel-substitution">
+            <div data-arg="home" data-montage-id="home"></div>
+            <div data-arg="product" data-montage-id="product"></div>
+            <div data-arg="product-detail" data-montage-id="productDetail"></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

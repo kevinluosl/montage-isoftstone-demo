@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="product-detail.css">
+    <script type="text/montage-serialization">
+        {
+            "owner": {
+                "properties": {
+                    "element": {"#": "owner"},
+                    "abilityList": {"#": "abilityList"},
+                    "informationList": {"#": "informationList"}
+                },
+                "listeners": [
+                    {
+                        "type": "action",
+                        "listener": {"@": "owner"}
+                    }
+                ],
+                "bindings": {
+                    "classList.has('ProductDetail--showMore')": {"<-": "@owner.showMore"}
+                }
+            },
+            "abilityMenu": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "abilityMenu"},
+                    "hasTemplate": false,
+                    "index": 0
+                },
+                "bindings": {
+                    "classList.has('ProductDetail-menuBar-menu--active')": {"<-": "@owner.selectedMenuIndex == 0"}
+                }
+            },
+            "introductionMenu": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "introductionMenu"},
+                    "hasTemplate": false,
+                    "index": 1
+                },
+                "bindings": {
+                    "classList.has('ProductDetail-menuBar-menu--active')": {"<-": "@owner.selectedMenuIndex == 1"}
+                }
+            },
+            "moreBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "moreBtn"},
+                    "hasTemplate": false
+                }
+            },
+            "homeBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "homeBtn"},
+                    "hasTemplate": false
+                }
+            },
+            "cover": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "cover"},
+                    "hasTemplate": false
+                }
+            },
+            "info1": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "info1"},
+                    "hasTemplate": false
+                }
+            },
+            "info2": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "info2"},
+                    "hasTemplate": false
+                }
+            },
+            "fakeInfoPanel": {
+                "prototype": "montage/ui/component",
+                "properties": {
+                    "element": {"#": "fakeInfoPanel"},
+                    "hasTemplate": false
+                },
+                "bindings": {
+                    "classList.has('ProductDetail-infoPanel--display')": {"<-": "@owner._showFakeInfo"}
+                }
+            },
+            "fakeVideoPanel": {
+                "prototype": "montage/ui/component",
+                "properties": {
+                    "element": {"#": "fakeVideoPanel"},
+                    "hasTemplate": false
+                },
+                "bindings": {
+                    "classList.has('ProductDetail-infoPanel--display')": {"<-": "@owner._showFakeVideo"}
+                }
+            },
+            "backBtn": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "backBtn"},
+                    "hasTemplate": false
+                }
+            },
+            "backBtn1": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "backBtn1"},
+                    "hasTemplate": false
+                }
+            },
+            "video1": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "video1"},
+                    "hasTemplate": false
+                }
+            },
+            "video2": {
+                "prototype": "montage/ui/button.reel",
+                "properties": {
+                    "element": {"#": "video2"},
+                    "hasTemplate": false
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div data-montage-id="owner" class="ProductDetail">
+    <div class="ProductDetail-header">
+        <div data-montage-id="moreBtn" class="ProductDetail-header-settingBtn ProductDetail-header-btn"></div>
+            <span class="ProductDetail-header-title">
+                软通动力公司介绍
+            </span>
+
+        <div data-montage-id="homeBtn" class="ProductDetail-header-homeBtn ProductDetail-header-btn"></div>
+        <div class="productDetail-header-avatar"></div>
+    </div>
+    <div class="ProductDetail-menuBar">
+        <div data-montage-id="abilityMenu" class="ProductDetail-menuBar-menu">公司能力</div>
+        <div data-montage-id="introductionMenu" class="ProductDetail-menuBar-menu">公司简介</div>
+    </div>
+    <div data-montage-id="abilityList" class="ProductDetail-list">
+        <div class="ProductDetail-list-item">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_one.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-list-item-info-title">移动互联网能力</div>
+                <div class="ProductDetail-list-item-info-date">更新于：2014-12-17</div>
+                <div class="ProductDetail-list-item-info-buttons">
+                    <div class="ProductDetail-list-item-info-buttons-infoBtn button">信息</div>
+                    <div class="ProductDetail-list-item-info-buttons-readBtn button">阅读</div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductDetail-list-item">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_two.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-list-item-info-title">云战略能力</div>
+                <div class="ProductDetail-list-item-info-date">更新于：2014-12-09</div>
+                <div class="ProductDetail-list-item-info-buttons">
+                    <div class="ProductDetail-list-item-info-buttons-infoBtn button">信息</div>
+                    <div class="ProductDetail-list-item-info-buttons-readBtn button">阅读</div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductDetail-list-item">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_tree.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-list-item-info-title">大数据能力</div>
+                <div class="ProductDetail-list-item-info-date">更新于：2014-12-09</div>
+                <div class="ProductDetail-list-item-info-buttons">
+                    <div class="ProductDetail-list-item-info-buttons-infoBtn button">信息</div>
+                    <div class="ProductDetail-list-item-info-buttons-readBtn button">阅读</div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductDetail-list-item">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_four.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-list-item-info-title">物联网能力</div>
+                <div class="ProductDetail-list-item-info-date">更新于：2014-12-09</div>
+                <div class="ProductDetail-list-item-info-buttons">
+                    <div class="ProductDetail-list-item-info-buttons-infoBtn button">信息</div>
+                    <div class="ProductDetail-list-item-info-buttons-readBtn button">阅读</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-montage-id="informationList" class="ProductDetail-list ProductDetail-list-goRight">
+        <div class="ProductDetail-list-item">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_five.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-list-item-info-title">创新技术与企业资质</div>
+                <div class="ProductDetail-list-item-info-date">更新于：2014-12-17</div>
+                <div class="ProductDetail-list-item-info-buttons">
+                    <div data-montage-id="info1" class="ProductDetail-list-item-info-buttons-infoBtn button">信息</div>
+                    <div data-montage-id="info2" class="ProductDetail-list-item-info-buttons-readBtn button">阅读</div>
+                </div>
+            </div>
+        </div>
+        <div class="ProductDetail-list-item">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_seven.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-list-item-info-title">软通动力Video</div>
+                <div class="ProductDetail-list-item-info-date">更新于：2014-12-17</div>
+                <div class="ProductDetail-list-item-info-buttons">
+                    <div data-montage-id="video2" class="ProductDetail-list-item-info-buttons-infoBtn button">信息</div>
+                    <div data-montage-id="video1" class="ProductDetail-list-item-info-buttons-readBtn button">观看</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-montage-id="fakeInfoPanel" class="ProductDetail-infoPanel">
+        <div class="ProductDetail-infoPanel-bar">
+            <div data-montage-id="backBtn" class="ProductDetail-infoPanel-bar-backBtn button">返回</div>
+            <span class="ProductDetail-infoPanel-bar-title">创新技术与企业资质</span>
+        </div>
+        <div class="ProductDetail-infoPanel-summary">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_five.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-infoPanel-summary-title">更新于：2014-12-17</div>
+                <div class="ProductDetail-infoPanel-summary-title">大小：1.9MB</div>
+                <div class="ProductDetail-infoPanel-summary-title">版本：1.0.1</div>
+                <div class="ProductDetail-infoPanel-summary-title">页数：11</div>
+            </div>
+        </div>
+        <div class="ProductDetail-infoPanel-description">
+            软通动力持续加大研发投入，正在转型成为以创新业务为驱动的新型IT服务企业.
+            软通动力的技术研发组织由集团创新研究院、各业务群技术研发部和专家委员会组成。 此外，软通动力还在全球范围内建立了十多个卓越中心（CoEs），覆盖了关键技术和行业领域，
+            包括云计算、大数据、移动互联、创新体验中心、银行业等。
+
+            截止到2013年底，软通动力申请专利 15 件，授权专利 6 件，软件著作权登记260 多项， 软件产品登记超过65项，各类研发成果广泛应用于金融、通信、能源、智慧城市等关键技术和行业领域。
+        </div>
+        <div>
+        </div>
+    </div>
+
+    <div data-montage-id="fakeVideoPanel" class="ProductDetail-infoPanel">
+        <div class="ProductDetail-infoPanel-bar">
+            <div data-montage-id="backBtn1" class="ProductDetail-infoPanel-bar-backBtn button">返回</div>
+            <span class="ProductDetail-infoPanel-bar-title">软通动力Video</span>
+        </div>
+        <div class="ProductDetail-infoPanel-summary">
+            <img class="ProductDetail-list-item-img" src="../../assets/images/picture_seven.png">
+
+            <div class="ProductDetail-list-item-info">
+                <div class="ProductDetail-infoPanel-summary-title">更新于：2014-12-17</div>
+                <div class="ProductDetail-infoPanel-summary-title">大小：50.9MB</div>
+                <div class="ProductDetail-infoPanel-summary-title">版本：1.0.1</div>
+                <div class="ProductDetail-infoPanel-summary-title">时长：00:00:58</div>
+            </div>
+        </div>
+        <div class="ProductDetail-infoPanel-video">
+            <iframe width="100%" height="200" src="https://www.youtube.com/embed/-zcfIjYQt2g" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <a href="https://www.youtube.com/embed/-zcfIjYQt2g"  target="_blank" class="ProductDetail-infoPanel-openInNew button">新窗口播放</a>
+        <div>
+        </div>
+    </div>
+
+    <div data-montage-id="cover" class="ProductDetail-cover">
+    </div>
+    <div class="ProductDetail-morePanel-contentPanel">
+        <div class="ProductDetail-morePanel-contentPanel-title">更多</div>
+        <div class="ProductDetail-morePanel-contentPanel-menuItem">· 版本信息 ·
+            <span class="ProductDetail-morePanel-contentPanel-menuItem-arrow"> ></span>
+        </div>
+        <div class="ProductDetail-morePanel-contentPanel-menuItem">· 使用指南 ·
+            <span class="ProductDetail-morePanel-contentPanel-menuItem-arrow"> ></span>
+        </div>
+        <div class="ProductDetail-morePanel-contentPanel-menuItem">· 联系我们 ·
+            <span class="ProductDetail-morePanel-contentPanel-menuItem-arrow"> ></span>
+        </div>
+        <div class="ProductDetail-morePanel-contentPanel-menuItem">· 二维码 ·
+            <span class="ProductDetail-morePanel-contentPanel-menuItem-arrow"> ></span>
+        </div>
+        <div class="ProductDetail-morePanel-contentPanel-aboutUs">
+            <div class="ProductDetail-morePanel-contentPanel-aboutUs-title">关于我们</div>
+            <div class="ProductDetail-morePanel-contentPanel-aboutUs-description">
+                软通动力的技术研发组织由集团创新研究院、各业务群技术研发部和专家委员会组成。
+                此外，软通动力还在全球范围内建立了十多个卓越中心（CoEs），覆盖了关键技术和行业领域， 包括云计算、大数据、移动互联、创新体验中心、银行业等。
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
